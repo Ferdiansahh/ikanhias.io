@@ -1,0 +1,39 @@
+.keranjang-store {
+  h2 {
+    font-size: 16px;
+    color: #0c0d36;
+    margin-top: 18px;
+    font-weight: 600;
+  }
+
+  .product-title {
+    font-size: 16px;
+    color: #0c0d36;
+    margin-top: 18px;
+  }
+
+  .product-subtitle {
+    font-size: 14px;
+    color: #979797;
+  }
+
+  .table-keranjang {
+    margin-left: -15px;
+    margin-right: -15px;
+
+    th {
+      font-weight: 200;
+    }
+
+    .image-keranjang {
+      border-radius: 8px;
+      max-height: 80px;
+    }
+
+    .btn-remove-keranjang {
+      margin-top: 18px;
+
+      @include button-variant(#fc5e84, transparent);
+    }
+  }
+}

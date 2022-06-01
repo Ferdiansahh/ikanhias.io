@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+
+  <title> Toko ikan hias</title>
+
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+  <link href="style/main.css" rel="stylesheet" />
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg navbar-light navbar-store fixed-top navbar-fixed-top" data-aos="fade-down">
+    <div class="container">
+      <a href="/index.html" class="navbar-brand">
+        <img src="/images/logo.png" alt="logo">
+        IKAN<b>HIAS</b>
+      </a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarResponsive">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item active">
+            <a href="/index.html" class="nav-link">Home</a>
+          </li>
+
+          <!-- desktop markup -->
+
+        </ul>
+        <ul class="navbar-nav d lg-flex">
+          <li class="nav-item dropdown">
+            <a href="#" class="nav-link" id="navDropdown" role="button" data-toggle="dropdown">
+              <img src="/images/image 13.png" alt="" class="rounded-circel mr-2" />
+              Hi,Ferdyansyah
+            </a>
+            <div class="dropdown-menu">
+              <a href="/dashboard.html" class="dropdown-item">Dashboard</a>
+              <a href="/dashboard-account.html" class="dropdown-item">Settings</a>
+              <div class="dropdown-divider">
+                <a href="/" class="dropdown-item">Logout</a>
+              </div>
+            </div>
+          </li>
+          <li class="nav-item">
+            <a href="#" class="nav-link d-inline-block mt-2">
+              <img src="/images/cart.png" alt="">
+              Keranjang
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Page content -->
+  <div class="page-content page-details">
+    <section class="store-breadcrumbs" data-aos="fade-down" data-aos-delay="100">
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <nav>
+              <ol class="breadcrumb">
+                <li class="breadcrumb-item">
+                  <a href="/index.html">Home</a>
+                </li>
+                <li class="breadcrumb-item active">
+                  Products Details
+                </li>
+              </ol>
+            </nav>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="store-gallery" id="gallery">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8" data-aos="zoom-in">
+
+            <img :src="photos[Activephoto].url" :key="photos[Activephoto].id" class="w-100 main-image" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="store-details-container" data-aos="fade-up">
+      <section class="store-heading">
+        <div class="container">
+          <div class="row">
+            <div class="col-lg-8">
+              <h1>Ikan Hias</h1>
+              <div class="owner">Ferdiansyah</div>
+              <div class="price">Rp.72.000</div>
+            </div>
+            <div class="col-lg-8" data-aos="zoom-in">
+              <a href="/keranjang.html" class="btn btn-success px-4 text-white btn-block mb-3">
+                Masukkan Keranjang
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="store-description">
+        <div class="container">
+          <div class="row">
+            <div class="col-12 col-lg-8" data-aos="fade-up">
+              <p>
+                Ikan mas hias (Carassius auratus auratus) adalah ikan air tawar dari familia Cyprinidae dan ordo
+                Cypriniformes. Ikan ini adalah salah satu ikan yang pertama kali berhasil didomestikasi, dipelihara, dan
+                dibudidayakan manusia.
+                <li>
+                  <b>Spesies</b>: C. auratus
+                </li>
+                <li>
+                  <b>Subspesies</b>: C. a. auratus
+                </li>
+                <li>
+                  <b>Famili</b>: Cyprinidae
+                </li>
+                <li>
+                  <b>Genus</b>: Carassius
+                </li>
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </div>
+  </div>
+
+  <footer class="bg-light text-center text-lg-start">
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+      2022 Copyright Ferdiansyah, All Rights Reserved.
+    </div>
+    <!-- Copyright -->
+  </footer>
+  <!-- Bootstrap core JavaScript -->
+  <script src="/vendor/jquery/jquery.slim.min.js"></script>
+  <script src="/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
+  <script src="/vendor/vue/vue.js"></script>
+  <script>
+    var gallery = new Vue({
+      el: "#gallery",
+      mounted() {
+        AOS.init();
+      },
+      data: {
+        Activephoto: 0,
+        photos: [
+          {
+            id: 1,
+            url: "/images/ikan2.jpg"
+          },
+        ],
+      },
+    });
+  </script>
+  <script src="/script/navbar-scroll.js"></script>
+</body>
+
+</html>
